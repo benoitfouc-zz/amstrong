@@ -1,0 +1,34 @@
+# Nombre d'Armstrong
+# C'est un nombre de trois chiffres qui est egal à la somme des cubes
+# des chiffres qui le composent
+
+# TODO
+# 1 - intégrer les tests dans la fonction pour assurer que nombre est à 3 chiffres
+# 2 - rajouter une fonction RechercherTousLesNombresDArmstrong
+#     qui affiche les seuls nombres d'Armstrong (il y en a 4)
+#     cette version efffectue une boucle for
+# 3 - refaire cette fonction (V2) avec 3 boucles for imbriquée sur u, d, c
+
+def EstUnNombreDArmstrong(nombre):
+    # decomposition
+    c = nombre // 100
+    d = (nombre%100) // 10
+    u = nombre%10
+
+    # test
+    if (nombre == c**3+d**3+u**3):
+        return True
+    else:
+        return False
+
+# Programme principal   
+nombre=int(input("Entrez un nombre de trois chiffres : "))
+
+if EstUnNombreDArmstrong(nombre):
+    print (nombre, " est un nombre d'Armstrong !")
+else:
+    print (nombre, " n'est pas un nombre d'Armstrong...")
+
+#Tester tous les nombres, boucle de 100 à 999.faire des test avec if avant
+#pour tester 3 chiffres ou non. 99<x<1000.
+#FOR
